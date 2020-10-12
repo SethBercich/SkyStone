@@ -23,10 +23,10 @@ public class TeleOpTest extends LinearOpMode {
         waitForStart();
 
         while(opModeIsActive()){
-            motorFrontLeft.setPower(gamepad1.left_stick_y - gamepad1.left_stick_x);
-            motorBackLeft.setPower(gamepad1.left_stick_y + gamepad1.left_stick_x);
-            motorFrontRight.setPower(gamepad1.right_stick_y + gamepad1.right_stick_x);
-            motorBackRight.setPower(gamepad1.right_stick_y - gamepad1.right_stick_x);
+            motorFrontLeft.setPower(gamepad1.left_stick_y + gamepad1.left_stick_x);
+            motorBackLeft.setPower(gamepad1.left_stick_y - gamepad1.left_stick_x);
+            motorFrontRight.setPower(gamepad1.right_stick_y - gamepad1.right_stick_x);
+            motorBackRight.setPower(gamepad1.right_stick_y + gamepad1.right_stick_x);
             idle();
         }
     }
