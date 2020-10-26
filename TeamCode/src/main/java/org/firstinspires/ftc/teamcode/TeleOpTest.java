@@ -35,7 +35,7 @@ public class TeleOpTest extends LinearOpMode {
             motorBackRight.setPower(gamepad1.right_stick_y + gamepad1.right_stick_x);
 
             //Arm Stuff
-            armMotor.setPower(gamepad2.left_stick_y);
+            armMotor.setPower(gamepad2.left_stick_y/0.1);
 
             if(gamepad2.a) {
                 armServo.setPosition(1);
