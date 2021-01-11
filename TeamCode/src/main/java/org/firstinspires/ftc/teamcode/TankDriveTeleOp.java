@@ -12,6 +12,7 @@ public class TankDriveTeleOp extends LinearOpMode {
     private DcMotor motorBackLeft;
     private DcMotor motorBackRight;
 
+    private DcMotor motorConveyor;
     private DcMotor motorLaunch;
     private DcMotor motorIntake;
 
@@ -30,6 +31,7 @@ public class TankDriveTeleOp extends LinearOpMode {
 
         motorLaunch = hardwareMap.dcMotor.get("motorLaunch"); motorLaunch.setDirection(DcMotor.Direction.FORWARD);
         motorIntake = hardwareMap.dcMotor.get("motorIntake"); motorIntake.setDirection(DcMotor.Direction.FORWARD);
+        motorConveyor = hardwareMap.dcMotor.get("motorConveyor"); motorConveyor.setDirection(DcMotor.Direction.FORWARD);
 
         armServo.setPosition(0);
 
@@ -55,6 +57,7 @@ public class TankDriveTeleOp extends LinearOpMode {
             //Shooter Stuff
             motorLaunch.setPower(gamepad2.right_trigger);
             motorIntake.setPower(gamepad2.right_stick_y);
+            motorConveyor.setPower(gamepad2.left_trigger);
 
             idle();
         }
